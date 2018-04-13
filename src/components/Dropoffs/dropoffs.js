@@ -3,14 +3,16 @@ import Restaurants from '../Restaurants/restaurants';
 
 class Dropoffs extends Component {
   render() {
-    let DeliveryInfo = this.props.dropoffs.deliveries.map(deliveries => <Restaurants key={deliveries.deliveryId} deliveries={deliveries}/>);
+    
+    let DeliveryInfo = this.props.dropoffs.deliveries.map(deliveries => 
+    <Restaurants key={deliveries.deliveryId} deliveryInfo={deliveries}/>);
 
     console.log('info', DeliveryInfo);
-    
+
     return (
-      <div className="deliveries">
-        <button key={this.props.dropoffs.day}>{this.props.dropoffs.day}</button>
-        {DeliveryInfo}
+      <div key={this.props.dropoffs.day} className="dropoffs">
+        <button>{this.props.dropoffs.day}</button>
+        {DeliveryInfo}    
       </div>
     );
   }

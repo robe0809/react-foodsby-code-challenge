@@ -5,8 +5,8 @@ class Restaurants extends Component {
     render() {
         return (
         <div className="deliveries">
-            {this.props.deliveries.restaurantName}
-            <RestaurantOptions key={this.props.deliveries.deliveryId} deliveries={this.props.deliveries}/>
+            {this.props.deliveryInfo.restaurantName}
+            <RestaurantOptions key={this.props.deliveryInfo.deliveryId} deliveryInfo={this.props.deliveryInfo}/>
         </div>
         );
     }

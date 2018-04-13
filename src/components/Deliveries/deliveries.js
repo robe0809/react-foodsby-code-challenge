@@ -5,7 +5,6 @@ class Deliveries extends Component {
   render() {
     let foodsbyDeliveries = this.props.dropoffs.map(items => <Dropoffs key={items.day} dropoffs={items} />);
     console.log('deliveries', foodsbyDeliveries);
-    
     return (
       <div className="deliveries">
         <header className="App-header">

@@ -9,6 +9,7 @@ class App extends Component {
     super(props);
     this.state = {
       dropoffs: [],
+      showDeliveryInfo: false,
     }
   }
 
@@ -16,6 +17,7 @@ class App extends Component {
   componentWillMount() {
     this.setState({
       dropoffs: Data.dropoffs,
+      showDeliveryInfo: true,
     })
   }
   
